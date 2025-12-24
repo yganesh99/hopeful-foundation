@@ -1,5 +1,8 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
+import { useState } from 'react';
 import { Container } from '../ui/Container';
 
 const navItems = [
@@ -11,6 +14,8 @@ const navItems = [
 ];
 
 export function Header() {
+	const [isOpen, setIsOpen] = useState(false);
+
 	return (
 		<header className='bg-white text-secondary sticky top-0 z-50 shadow-md'>
 			<Container className='flex h-20 items-center justify-between'>
@@ -26,6 +31,8 @@ export function Header() {
 						priority
 					/>
 				</Link>
+
+				{/* Desktop Navigation */}
 				<nav className='hidden md:flex gap-8'>
 					{navItems.map((item) => (
 						<Link
@@ -37,26 +44,64 @@ export function Header() {
 						</Link>
 					))}
 				</nav>
+
+				{/* Mobile Menu Button */}
 				<div className='md:hidden'>
-					{/* Mobile menu button placeholder */}
-					<button className='text-secondary p-2'>
-						<span className='sr-only'>Open menu</span>
-						<svg
-							className='h-6 w-6'
-							fill='none'
-							viewBox='0 0 24 24'
-							stroke='currentColor'
-						>
-							<path
-								strokeLinecap='round'
-								strokeLinejoin='round'
-								strokeWidth={2}
-								d='M4 6h16M4 12h16M4 18h16'
-							/>
-						</svg>
+					<button
+						className='text-primary p-2'
+						onClick={() => setIsOpen(!isOpen)}
+						aria-label='Toggle menu'
+					>
+						{isOpen ? (
+							<svg
+								className='h-6 w-6'
+								fill='none'
+								viewBox='0 0 24 24'
+								stroke='currentColor'
+							>
+								<path
+									strokeLinecap='round'
+									strokeLinejoin='round'
+									strokeWidth={2}
+									d='M6 18L18 6M6 6l12 12'
+								/>
+							</svg>
+						) : (
+							<svg
+								className='h-6 w-6'
+								fill='none'
+								viewBox='0 0 24 24'
+								stroke='currentColor'
+							>
+								<path
+									strokeLinecap='round'
+									strokeLinejoin='round'
+									strokeWidth={2}
+									d='M4 6h16M4 12h16M4 18h16'
+								/>
+							</svg>
+						)}
 					</button>
 				</div>
 			</Container>
+
+			{/* Mobile Menu Overlay */}
+			{isOpen && (
+				<div className='md:hidden absolute top-20 left-0 w-full bg-secondary border-b border-primary/10 shadow-lg py-4 px-6 animate-in slide-in-from-top-2 duration-200'>
+					<nav className='flex flex-col space-y-4'>
+						{navItems.map((item) => (
+							<Link
+								key={item.name}
+								href={item.href}
+								className='text-primary text-lg font-medium p-2 hover:bg-primary/5 rounded block'
+								onClick={() => setIsOpen(false)}
+							>
+								{item.name}
+							</Link>
+						))}
+					</nav>
+				</div>
+			)}
 		</header>
 	);
 }
