@@ -17,7 +17,12 @@ export default function GetInvolvedPage() {
 						community projects. Every donation makes a tangible
 						difference.
 					</p>
-					<Button variant='primary'>Make a Donation</Button>
+					<Button
+						variant='primary'
+						className='hover:text-white'
+					>
+						Make a Donation
+					</Button>
 				</div>
 
 				<div>
@@ -30,7 +35,12 @@ export default function GetInvolvedPage() {
 						volunteer your time or collaborate on a project, we'd
 						love to hear from you.
 					</p>
-					<Button variant='secondary'>Contact Us</Button>
+					<Button
+						variant='secondary'
+						className='hover:text-white'
+					>
+						Contact Us
+					</Button>
 				</div>
 			</Container>
 		</div>

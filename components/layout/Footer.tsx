@@ -4,22 +4,23 @@ import { Container } from '../ui/Container';
 
 export function Footer() {
 	return (
-		<footer className='bg-primary text-secondary py-12 border-t border-secondary/10'>
+		<footer className='bg-quaternary text-black py-12 border-t border-secondary/10'>
 			<Container>
 				<div className='grid grid-cols-1 md:grid-cols-4 gap-8 mb-8'>
 					<div className='col-span-1 md:col-span-2'>
 						<Link
 							href='/'
-							className='block relative h-12 w-48 mb-6'
+							className='block relative h-16 md:h-18 lg:h-20 aspect-2/1'
 						>
 							<Image
 								src='/logo.png'
 								alt='Hopeful Foundation'
 								fill
-								className='object-contain object-left'
+								className='object-cover object-left'
+								priority
 							/>
 						</Link>
-						<p className='text-neutral-support max-w-sm mb-6'>
+						<p className='text-black max-w-sm mb-6'>
 							Creating lasting impact through community
 							empowerment and conservation. Restoring hope,
 							preserving heritage, and building a sustainable
@@ -41,7 +42,7 @@ export function Footer() {
 								<li key={link.name}>
 									<Link
 										href={link.href}
-										className='text-neutral-support hover:text-accent transition-colors'
+										className='text-black hover:text-accent transition-colors'
 									>
 										{link.name}
 									</Link>
@@ -54,7 +55,7 @@ export function Footer() {
 						<h3 className='font-heading text-lg font-semibold mb-4 text-accent'>
 							Contact
 						</h3>
-						<ul className='space-y-2 text-neutral-support'>
+						<ul className='space-y-2 text-black'>
 							<li>info@hopefulfoundation.org</li>
 							<li>+94 11 234 5678</li>
 							<li>Colombo, Sri Lanka</li>
@@ -62,7 +63,7 @@ export function Footer() {
 					</div>
 				</div>
 
-				<div className='pt-8 border-t border-secondary/10 flex flex-col md:flex-row justify-between items-center text-sm text-neutral-support text-center md:text-left'>
+				<div className='pt-8 border-t border-secondary/10 flex flex-col md:flex-row justify-between items-center text-sm text-black text-center md:text-left'>
 					<p>
 						&copy; {new Date().getFullYear()} Hopeful Foundation.
 						All rights reserved.

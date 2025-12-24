@@ -5,6 +5,8 @@
 	--color-secondary: #f2efe9;
 	--color-accent: #d4af37;
 	--color-neutral-support: #a68f81;
+	--color-tertiary: #3b5844;
+	--color-quaternary: #d0d8c3;
 
 	--font-heading: var(--font-playfair);
 	--font-body: var(--font-inter);

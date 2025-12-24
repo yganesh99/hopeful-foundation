@@ -29,8 +29,8 @@ export function StorySection() {
 								vision for a sustainable future.
 							</p>
 							<Button
-								variant='outline'
-								className='border-primary text-primary hover:bg-primary hover:text-secondary'
+								// variant='outline'
+								className='hover:text-white'
 							>
 								Read Our Story
 							</Button>

@@ -17,14 +17,13 @@ export function CallToAction() {
 					<Button
 						variant='primary'
 						size='lg'
-						className='min-w-[160px]'
+						className='min-w-40 hover:text-white'
 					>
 						Donate
 					</Button>
 					<Button
-						variant='outline'
 						size='lg'
-						className='border-secondary text-secondary hover:bg-secondary hover:text-primary min-w-[160px]'
+						className=' min-w-40 hover:text-white'
 					>
 						Partner With Us
 					</Button>

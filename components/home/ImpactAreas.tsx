@@ -37,9 +37,9 @@ export function ImpactAreas() {
 							</p>
 
 							{/* Divider between columns, hidden on mobile and last item */}
-							{index !== impacts.length - 1 && (
+							{/* {index !== impacts.length - 1 && (
 								<div className='hidden md:block absolute top-0 -right-6 lg:-right-12 h-full w-px bg-neutral-support/20' />
-							)}
+							)} */}
 						</div>
 					))}
 				</div>

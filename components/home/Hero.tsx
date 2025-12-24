@@ -28,11 +28,11 @@ export function Hero() {
 					<p className='mb-8 text-lg font-medium text-secondary/90 md:text-xl lg:text-2xl max-w-2xl text-balance'>
 						Creating Lasting Impact Through Community & Conservation
 					</p>
-					<div className='flex flex-col md:flex-row gap-4 justify-center md:justify-start'>
+					<div className='flex flex-col md:flex-row gap-4 justify-center md:justify-center'>
 						<Button
 							variant='primary'
 							size='lg'
-							className='border-none shadow-lg hover:translate-y-[-2px] transition-transform'
+							className='hover:text-white shadow-lg hover:translate-y-0.5 transition-transform'
 						>
 							Support Our Mission
 						</Button>
